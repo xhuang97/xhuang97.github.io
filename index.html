@@ -89,8 +89,8 @@
 
 <p>
 <input type="button" value="cat"><br>
-<a href="google.com">Google</a><br>
-<a href="cmu.edu">CMU</a><br>
+<a href="www.google.com">Google</a><br>
+<a href="www.cmu.edu">CMU</a><br>
 
 
 <h1 class="center" id="headline">
@@ -160,7 +160,7 @@ $(document).ready(function() {
  	if(result) {
 	  var verb = result[1];
       var arg = result[2]
-
+      console.log("final script: " + final_transcript)
       console.log("verb: " + verb + ", args: " + arg)
 
       switch(verb) {
@@ -175,6 +175,8 @@ $(document).ready(function() {
       	  $("a,input,button").each(function() {
       	    if($(this)[0].tagName == "INPUT") {
       	    	// look for the text in INPUT fields
+              // var txt = $(this)[0].text()
+              console.log("in input")
       	    } else if() {
 
       	    }
