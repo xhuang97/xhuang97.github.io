@@ -94,13 +94,13 @@ $(document).ready(function() {
 
  	console.log("potential command:" + potentialcommand);
 
-    var re = /^(click|scroll|enter)\s(.*)/i;
-    var result = re.exec(potentialcommand);
+  var re = /^(click|scroll|enter)\s(.*)/i;
+  var result = re.exec(potentialcommand);
 
     // console.log("final script: " + final_transcript)
 
  	if(result) {
-	  var verb = result[1].toLowerCase();
+	    var verb = result[1].toLowerCase();
       var arg = result[2].toLowerCase();
       console.log("final script: " + final_transcript)
       console.log("verb: " + verb + ", args: " + arg)
