@@ -110,7 +110,7 @@ $(document).ready(function() {
       	  // what do we do if click?
       	  console.log("handling click")
 
-      	  console.log($("*:contains('" + arg + "')"));
+      	  // console.log($("*:contains('" + arg + "')"));
 
       	  var stringpieces = arg.split(/\s/);
 
@@ -119,7 +119,7 @@ $(document).ready(function() {
               console.log("string pieces: " + stringpieces)
               stringpieces.forEach(function(s){
                   console.log("string: " + s)
-                  console.log("this value: " + $(this).val())
+                  console.log("this value: " + $($(this)[0]).val())
                   if($(this).val() == s){
                     console.log("true!!!")
                     $(this).click()
