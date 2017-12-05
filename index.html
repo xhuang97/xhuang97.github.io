@@ -65,7 +65,7 @@
 
 
 <p>
-<input type="button" value="cat"><br>
+<input type="button" value="Accessibility" onclick="loadUrl('http://accessibilitycourse.com/projects/project8.html')"><br>
 <a href="www.google.com">Google</a><br>
 <a href="www.cmu.edu">CMU</a><br>
 </div>
@@ -77,6 +77,11 @@ var final_transcript = '';
 var recognizing = false;
 var ignore_onend;
 var start_timestamp;
+
+function loadUrl(location)
+{
+  this.document.location.href = location;
+}
 
 $(document).ready(function() {
 
