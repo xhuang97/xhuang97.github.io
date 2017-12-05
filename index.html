@@ -118,12 +118,12 @@ $(document).ready(function() {
       	    if($(this)[0].tagName == "INPUT") {
               console.log("this id: " + $(this)[0].id)
               console.log("this value: " + $(this)[0].value)
-              
+
               console.log("string pieces: " + stringpieces)
               stringpieces.forEach(function(s){
                   console.log("string: " + s)
 
-                  if($(this)[0].value == s){
+                  if($(this)[0].value.toLowerCase() == s.toLowerCase()){
                     console.log("true!!!")
                     $(this).click()
                   }
