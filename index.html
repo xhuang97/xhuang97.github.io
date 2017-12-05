@@ -161,14 +161,18 @@ $(document).ready(function() {
                     $(elt).click()
                   }
                   if(id && s && id.toLowerCase() == s.toLowerCase()){
+
                     console.log("click on id: " + id)
                     lastinput = document.getElementById(id.trim())
                     console.log("lastinput id: " + lastinput.id)
+                    if !(lastinput){
+                      alert("oops")
+                      break;
+                    }
+
                   }
               })
-              if !(lastinput){
-                alert("oops")
-              }
+
               break;
       	    } else if($(this)[0].tagName.toLowerCase() == "a"){
               var elt = $(this)[0]
@@ -229,7 +233,6 @@ $(document).ready(function() {
       	  console.log("sorry, that is not a recognized command")
       }
  	}
-
  })
 });
 
