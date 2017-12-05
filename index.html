@@ -175,6 +175,13 @@ $(document).ready(function() {
 
       	  break;
       	case "scroll":
+          stringpieces.forEach(function(s){
+              if("up" == s.toLowerCase()){
+                $(".scrollup").click()
+              } else{
+                $(".scrolldown").click()
+              }
+          })
       	  // what do we do on scroll?
       	  console.log("handling scroll`")
       	  break;
