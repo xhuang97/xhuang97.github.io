@@ -68,7 +68,7 @@
 <input type="button" value="Accessibility" onclick="loadUrl('http://accessibilitycourse.com/projects/project8.html')"><br>
 <a href="google.com">Google</a><br>
 <a href="cmu.edu">CMU</a><br>
-<button type="button">Click Me!</button>
+<button type="button" onclick="loadUrl('https://github.com/xhuang97/xhuang97.github.io')">Click Me!</button>
 </div>
 
 <script>
@@ -142,7 +142,7 @@ $(document).ready(function() {
                   console.log("this href: " + link)
                   if(val && s && val.toLowerCase() == s.toLowerCase()){
                     console.log("true!!!")
-                    
+
                   }
               })
             } else if( $(this)[0].tagName.toLowerCase() == "button" ){
