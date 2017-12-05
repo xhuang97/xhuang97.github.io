@@ -92,8 +92,8 @@ $(document).ready(function() {
     // console.log("final script: " + final_transcript)
 
  	if(result) {
-	  var verb = result[1];
-      var arg = result[2]
+	  var verb = result[1].toLowerCase();
+      var arg = result[2].toLowerCase();
       console.log("final script: " + final_transcript)
       console.log("verb: " + verb + ", args: " + arg)
 
@@ -102,7 +102,7 @@ $(document).ready(function() {
       	  // what do we do if click?
       	  console.log("handling click")
 
-      	  //console.log($("*:contains('" + arg + "')"));
+      	  console.log($("*:contains('" + arg + "')"));
 
       	  var stringpieces = arg.split(/\s/);
 
