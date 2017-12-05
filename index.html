@@ -109,8 +109,8 @@ $(document).ready(function() {
       	  $("a,input,button").each(function() {
       	    if($(this)[0].tagName == "INPUT") {
               console.log("string pieces: " + stringpieces)
-              stringpieces.each(function(s){
-                console.log("string " + s)
+              for (var i in stringpieces) {
+                console.log("string: " + s)
                 if($(this)[0].value == s){
                   $(this).click()
                 }
