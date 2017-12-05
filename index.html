@@ -127,7 +127,7 @@ $(document).ready(function() {
 
  	var potentialcommand = $("#command").val();
 
- 	console.log("potential command:" + potentialcommand);
+ 	// console.log("potential command:" + potentialcommand);
 
   var re = /^(click|scroll|enter)\s(.*)/i;
   var result = re.exec(potentialcommand);
@@ -152,7 +152,6 @@ $(document).ready(function() {
       	  var stringpieces = arg.split(/\s/);
 
       	  $("a,input,button").each(function() {
-            lastinput = $(this)[0]
 
       	    if($(this)[0].tagName == "INPUT") {
               var elt = $(this)[0]
@@ -160,6 +159,7 @@ $(document).ready(function() {
               stringpieces.forEach(function(s){
                   if(val && s && val.toLowerCase() == s.toLowerCase()){
                     $(elt).click()
+                    lastinput = $(this)[0]
                   }
               })
       	    } else if($(this)[0].tagName.toLowerCase() == "a"){
@@ -169,6 +169,7 @@ $(document).ready(function() {
               stringpieces.forEach(function(s){
                   if(val && s && val.toLowerCase() == s.toLowerCase()){
                     loadUrl(link)
+                    lastinput = $(this)[0]
                   }
               })
             } else if( $(this)[0].tagName.toLowerCase() == "button"){
@@ -178,6 +179,7 @@ $(document).ready(function() {
               stringpieces.forEach(function(s){
                   if(val && s && val.toLowerCase() == s.toLowerCase()){
                     $(elt).click()
+                    lastinput = $(this)[0]
                   }
               })
             }
