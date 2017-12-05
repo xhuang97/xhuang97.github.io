@@ -120,8 +120,6 @@ $(document).ready(function() {
               var elt = $(this)[0]
               var val = $(this)[0].value
               stringpieces.forEach(function(s){
-                  console.log("string: " + s)
-
                   if(val.toLowerCase() == s.toLowerCase()){
                     $(elt).click()
                   }
@@ -138,6 +136,7 @@ $(document).ready(function() {
             } else if( $(this)[0].tagName.toLowerCase() == "button"){
               var elt = $(this)[0]
               var val = $(this)[0].text
+              console.log("is a button!")
               stringpieces.forEach(function(s){
                   if(val && s && val.toLowerCase() == s.toLowerCase()){
                     console.log("true!!! button")
