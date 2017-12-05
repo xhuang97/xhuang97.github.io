@@ -132,7 +132,7 @@ $(document).ready(function() {
   var result = re.exec(potentialcommand);
 
   if(lastinput){
-    console.log("in do stuff lastinput val: " +  lastinput.val())
+    console.log("in do stuff lastinput val: " +  $(lastinput).val())
   }
 
 
@@ -173,11 +173,9 @@ $(document).ready(function() {
             } else if( $(this)[0].tagName.toLowerCase() == "button"){
               var elt = $(this)[0]
               var val = $(this)[0].value
-              console.log("is a button! value: " + $(this)[0].value)
 
               stringpieces.forEach(function(s){
                   if(val && s && val.toLowerCase() == s.toLowerCase()){
-                    console.log("true!!! button!!")
                     $(elt).click()
                   }
               })
