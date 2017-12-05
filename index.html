@@ -98,8 +98,6 @@ $(document).ready(function() {
   var re = /^(click|scroll|enter)\s(.*)/i;
   var result = re.exec(potentialcommand);
 
-    // console.log("final script: " + final_transcript)
-
  	if(result) {
 	    var verb = result[1].toLowerCase();
       var arg = result[2].toLowerCase();
@@ -118,7 +116,7 @@ $(document).ready(function() {
       	  $("a,input,button").each(function() {
       	    if($(this)[0].tagName == "INPUT") {
               var elt = $(this)[0]
-              var val = $(this)[0].value
+              var val = $(this)[0].values
               console.log("is a input!")
               stringpieces.forEach(function(s){
                   if(val.toLowerCase() == s.toLowerCase()){
@@ -138,11 +136,11 @@ $(document).ready(function() {
               var elt = $(this)[0]
               var val = $(this)[0].text
               console.log("is a button!")
+              console.log("text:" + val)
               stringpieces.forEach(function(s){
                   if(val && s && val.toLowerCase() == s.toLowerCase()){
                     console.log("true!!! button")
-                    console.log(val)
-                    console.log(elt)
+
                     $(elt).click()
                   }
               })
