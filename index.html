@@ -131,7 +131,10 @@ $(document).ready(function() {
   var re = /^(click|scroll|enter)\s(.*)/i;
   var result = re.exec(potentialcommand);
 
-  console.log("in do stuff lastinput val: " +  lastinput.val())
+  if(lastinput){
+    console.log("in do stuff lastinput val: " +  lastinput.val())
+  }
+
 
  	if(result) {
 
