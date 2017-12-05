@@ -114,7 +114,7 @@ $(document).ready(function() {
       	  $("a,input,button").each(function() {
       	    if($(this)[0].tagName == "INPUT") {
               console.log("string pieces: " + stringpieces)
-              for (var i in stringpieces) {
+              for (var s in stringpieces) {
                 console.log("string: " + s)
                 if($(this)[0].value == s){
                   $(this).click()
