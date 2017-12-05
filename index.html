@@ -66,8 +66,8 @@
 
 <p>
 <input type="button" value="Accessibility" onclick="loadUrl('http://accessibilitycourse.com/projects/project8.html')"><br>
-<a href="www.google.com">Google</a><br>
-<a href="www.cmu.edu">CMU</a><br>
+<a href="google.com">Google</a><br>
+<a href="cmu.edu">CMU</a><br>
 <button type="button">Click Me!</button>
 </div>
 
@@ -142,7 +142,7 @@ $(document).ready(function() {
                   console.log("this text: " + val)
                   if(val && s && val.toLowerCase() == s.toLowerCase()){
                     console.log("true!!!")
-                    $(elt).click()
+                    
                     loadUrl(link)
                   }
               })
