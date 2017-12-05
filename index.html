@@ -145,6 +145,8 @@ $(document).ready(function() {
       var arg = result[2].toLowerCase();
       console.log("verb: " + verb + ", args: " + arg)
 
+
+      var b = false
       switch(verb) {
       	case "click":
       	  var stringpieces = arg.split(/\s/);
@@ -159,18 +161,17 @@ $(document).ready(function() {
               stringpieces.forEach(function(s){
                   if(val && s && val.toLowerCase() == s.toLowerCase()){
                     $(elt).click()
+                    b = true
                   }
                   if(id && s && id.toLowerCase() == s.toLowerCase()){
 
                     console.log("click on id: " + id)
                     lastinput = document.getElementById(id.trim())
                     console.log("lastinput id: " + lastinput.id)
-
+                    b = true
                   }
               })
-              if (!lastinput){
-                alert("oops")
-              }
+
 
       	    } else if($(this)[0].tagName.toLowerCase() == "a"){
               var elt = $(this)[0]
@@ -180,6 +181,7 @@ $(document).ready(function() {
                   if(val && s && val.toLowerCase() == s.toLowerCase()){
                     loadUrl(link)
                     lastinput = $(this)[0]
+                    b = true
                   }
               })
 
@@ -192,27 +194,31 @@ $(document).ready(function() {
                   if(val && s && val.toLowerCase() == s.toLowerCase()){
                     $(elt).click()
                     lastinput = $(this)[0]
+                    b = true
                   }
                   if(id && s && id.toLowerCase() == s.toLowerCase()){
                     console.log("click on id: " + id)
                     lastinput = document.getElementById(id.trim())
                     console.log("lastinput id: " + lastinput.id)
+                    b = true
                   }
               })
             }
       	  })
 
-      	  break;
+
       	case "scroll":
           var stringpieces = arg.split(/\s/);
           stringpieces.forEach(function(s){
               if("up" == s.toLowerCase()){
                 $(".scrollup").click()
+                b = true
               } else{
                 $(".scrolldown").click()
+                b = true
               }
           })
-      	  break;
+
       	case "enter":
           var stringpieces = arg.split(/\s/);
           console.log("int enter lastinput id: " +  lastinput.id)
@@ -222,13 +228,17 @@ $(document).ready(function() {
               $(lastinput).val($(lastinput).val() + arg);
               console.log("int enter lastinput id: " +  lastinput.id)
               console.log("lastinput value: " +  lastinput.value)
+              b = true
             }
 
-      	  break;
+
       	default:
           msg()
           alert("sorry, that is not a recognized command")
       	  console.log("sorry, that is not a recognized command")
+      }
+      if (!b){
+        alert("oops")
       }
  	}
  })
