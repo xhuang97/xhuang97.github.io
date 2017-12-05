@@ -89,7 +89,7 @@ $(document).ready(function() {
   if (final_transcript.length > 1){
     $("#command").val(final_transcript)
   }
-  
+
  	var potentialcommand = $("#command").val();
 
  	console.log("potential command:" + potentialcommand);
@@ -117,12 +117,12 @@ $(document).ready(function() {
       	  $("a,input,button").each(function() {
       	    if($(this)[0].tagName == "INPUT") {
               console.log("string pieces: " + stringpieces)
-              for (var s in stringpieces) {
-                console.log("string: " + s)
-                if($(this)[0].value == s){
-                  $(this).click()
-                }
-              }
+              stringpieces.forEach(function(s){
+                  console.log("string: " + s)
+                  if($(this)[0].value == s){
+                    $(this).click()
+                  }
+              })
       	    }
       	  })
 
