@@ -136,6 +136,8 @@ $(document).ready(function() {
 
   if(lastinput){
     console.log("in do stuff lastinput id: " +  lastinput.id)
+  } else{
+    alert("oops!")
   }
 
 
@@ -217,9 +219,9 @@ $(document).ready(function() {
               console.log("lastinput value: " +  lastinput.value)
             }
 
-
       	  break;
       	default:
+          msg()
           alert("sorry, that is not a recognized command")
       	  console.log("sorry, that is not a recognized command")
       }
