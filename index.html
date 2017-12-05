@@ -205,7 +205,8 @@ $(document).ready(function() {
           var stringpieces = arg.split(/\s/);
           if($(lastinput).tagName == "INPUT"){
             $(lastinput).val($(lasttext).val() + arg);
-            console.log("lastinput val: " +  lastinput.val())
+            console.log("int enter lastinput id: " +  lastinput.id)
+            console.log("lastinput value: " +  lastinput.value)
           }
       	  break;
       	default:
