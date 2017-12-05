@@ -210,13 +210,13 @@ $(document).ready(function() {
           var stringpieces = arg.split(/\s/);
           console.log("int enter lastinput id: " +  lastinput.id)
           console.log("lastinput value: " +  lastinput.value)
-          stringpieces.forEach(function(s){
+
             if(lastinput.tagName == "INPUT"){
-              $(lastinput).val($(lastinput).val() + s);
+              $(lastinput).val($(lastinput).val() + arg);
               console.log("int enter lastinput id: " +  lastinput.id)
               console.log("lastinput value: " +  lastinput.value)
             }
-          })
+          
 
       	  break;
       	default:
