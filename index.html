@@ -203,7 +203,7 @@ $(document).ready(function() {
       	  break;
       	case "enter":
           var stringpieces = arg.split(/\s/);
-          if($(lastinput).tagName == "INPUT"){
+          if(lastinput.tagName == "INPUT"){
             $(lastinput).val($(lasttext).val() + arg);
             console.log("int enter lastinput id: " +  lastinput.id)
             console.log("lastinput value: " +  lastinput.value)
