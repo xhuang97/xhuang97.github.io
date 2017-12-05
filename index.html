@@ -84,7 +84,7 @@
 </style>
 
 <p>
-<input type="text" id="command"><input type="button" value="Do something!" id="commandbutton">
+<input type="text" id="command">Default</input><input type="button" value="Do something!" id="commandbutton">
 </p>
 
 <p>
@@ -185,7 +185,7 @@ $(document).ready(function() {
       	  console.log("handling scroll`")
       	  break;
       	case "enter":
-      	  // what do we do on enter?
+      	  $("#command").val() = result
       	  console.log("handling enter")
       	  break;
       	default:
