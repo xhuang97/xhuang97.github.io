@@ -158,6 +158,7 @@ $(document).ready(function() {
                   if(id && s && id.toLowerCase() == s.toLowerCase()){
                     console.log("click on id: " + id)
                     lastinput = elt
+                    console.log("lastinput id: " + $(lastinput).id)
                   }
               })
       	    } else if($(this)[0].tagName.toLowerCase() == "a"){
@@ -183,6 +184,7 @@ $(document).ready(function() {
                   if(id && s && id.toLowerCase() == s.toLowerCase()){
                     console.log("click on id: " + id)
                     lastinput = elt
+                    console.log("lastinput id: " + $(lastinput).id)
                   }
               })
             }
