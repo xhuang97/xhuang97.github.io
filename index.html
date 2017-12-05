@@ -139,7 +139,7 @@ $(document).ready(function() {
               stringpieces.forEach(function(s){
                   console.log("string: " + s)
                   console.log("this href: " + val)
-                  if(val.toLowerCase() == s.toLowerCase()){
+                  if(val && s && val.toLowerCase() == s.toLowerCase()){
                     // console.log("true!!!")
                     $(elt).click()
                   }
