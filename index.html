@@ -206,7 +206,7 @@ $(document).ready(function() {
           console.log("int enter lastinput id: " +  lastinput.id)
           console.log("lastinput value: " +  lastinput.value)
           if(lastinput.tagName == "INPUT"){
-            $(lastinput).val($(lasttext).val() + arg);
+            $(lastinput).val($(lastinput).val() + arg);
             console.log("int enter lastinput id: " +  lastinput.id)
             console.log("lastinput value: " +  lastinput.value)
           }
