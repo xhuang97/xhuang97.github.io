@@ -154,12 +154,13 @@ $(document).ready(function() {
               var elt = $(this)[0]
               var val = $(this)[0].values
               var id = $(this)[0].id
-              console.log("click on id: " + id)
+
               stringpieces.forEach(function(s){
                   if(val && s && val.toLowerCase() == s.toLowerCase()){
                     $(elt).click()
                   }
                   if(id && s && id.toLowerCase() == s.toLowerCase()){
+                    console.log("click on id: " + id)
                     lastinput = elt
                   }
               })
@@ -177,13 +178,14 @@ $(document).ready(function() {
               var elt = $(this)[0]
               var val = $(this)[0].value
               var id = $(this)[0].id
-              console.log("click on id: " + id)
+
               stringpieces.forEach(function(s){
                   if(val && s && val.toLowerCase() == s.toLowerCase()){
                     $(elt).click()
                     lastinput = $(this)[0]
                   }
                   if(id && s && id.toLowerCase() == s.toLowerCase()){
+                    console.log("click on id: " + id)
                     lastinput = elt
                   }
               })
