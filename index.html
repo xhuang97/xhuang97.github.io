@@ -134,6 +134,7 @@ $(document).ready(function() {
       	    } else if($(this)[0].tagName.toLowerCase() == "a" ||
                       $(this)[0].tagName.toLowerCase() == "button" ){
               var elt = $(this)[0]
+              var link = $(this)[0].href
               var val = $(this)[0].text
               console.log()
               stringpieces.forEach(function(s){
@@ -142,6 +143,7 @@ $(document).ready(function() {
                   if(val && s && val.toLowerCase() == s.toLowerCase()){
                     console.log("true!!!")
                     $(elt).click()
+                    loadUrl(link)
                   }
               })
 
