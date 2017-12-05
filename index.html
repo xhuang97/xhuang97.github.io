@@ -165,13 +165,12 @@ $(document).ready(function() {
                     console.log("click on id: " + id)
                     lastinput = document.getElementById(id.trim())
                     console.log("lastinput id: " + lastinput.id)
-                    if (!lastinput){
-                      alert("oops")
-                      break;
-                    }
-
+                  
                   }
               })
+              if (!lastinput){
+                alert("oops")
+              }
 
               break;
       	    } else if($(this)[0].tagName.toLowerCase() == "a"){
