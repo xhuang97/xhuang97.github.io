@@ -84,7 +84,7 @@
 </style>
 
 <p>
-<input type="text" id="command">Default</input><input type="button" value="Do something!" id="commandbutton">
+<input type="text" id="command"><input type="button" value="Do something!" id="commandbutton">
 </p>
 
 <p>
@@ -154,10 +154,12 @@ $(document).ready(function() {
  	var potentialcommand = $("#command").val();
 
  	console.log(potentialcommand);
-  console.log("result:" + result)
+
 
     var re = /^(click|scroll|enter)\s(.*)/i;
     var result = re.exec(potentialcommand);
+
+    console.log("result:" + result)
 
  	if(result) {
 	  var verb = result[1];
