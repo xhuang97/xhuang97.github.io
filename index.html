@@ -176,6 +176,7 @@ $(document).ready(function() {
 
       	  break;
       	case "scroll":
+          var stringpieces = arg.split(/\s/);
           stringpieces.forEach(function(s){
               if("up" == s.toLowerCase()){
                 $(".scrollup").click()
@@ -187,7 +188,7 @@ $(document).ready(function() {
       	  console.log("handling scroll`")
       	  break;
       	case "enter":
-
+          var stringpieces = arg.split(/\s/);
       	  console.log("handling enter")
       	  break;
       	default:
