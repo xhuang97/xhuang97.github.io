@@ -233,13 +233,14 @@ $(document).ready(function() {
 
         break;
       	default:
-          msg()
-          alert("sorry, that is not a recognized command")
-      	  console.log("sorry, that is not a recognized command")
+          if (!b){
+            alert("oops")
+            alert("sorry, that is not a recognized command")
+        	  console.log("sorry, that is not a recognized command")
+          }
+
       }
-      if (!b){
-        alert("oops")
-      }
+
  	}
  })
 });
