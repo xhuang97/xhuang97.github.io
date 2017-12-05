@@ -116,11 +116,13 @@ $(document).ready(function() {
 
       	  $("a,input,button").each(function() {
       	    if($(this)[0].tagName == "INPUT") {
+              console.log("this id: " + $(this)[0].id)
+              console.log("this value: " + $(this)[0].value)
+              
               console.log("string pieces: " + stringpieces)
               stringpieces.forEach(function(s){
                   console.log("string: " + s)
-                  console.log("this id: " + $(this)[0].id)
-                  console.log("this value: " + $(this)[0].value)
+
                   if($(this)[0].value == s){
                     console.log("true!!!")
                     $(this).click()
