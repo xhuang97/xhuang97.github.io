@@ -142,7 +142,7 @@ $(document).ready(function() {
                   console.log("this href: " + link)
                   if(val && s && val.toLowerCase() == s.toLowerCase()){
                     console.log("true!!!")
-
+                    loadUrl(link)
                   }
               })
             } else if( $(this)[0].tagName.toLowerCase() == "button" ){
@@ -150,7 +150,7 @@ $(document).ready(function() {
               var val = $(this)[0].text
               stringpieces.forEach(function(s){
                   if(val && s && val.toLowerCase() == s.toLowerCase()){
-                    console.log("true!!!")
+                    console.log("true!!! button")
                     $(elt).click()
                   }
               })
