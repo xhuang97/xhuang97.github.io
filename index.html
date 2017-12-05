@@ -136,8 +136,6 @@ $(document).ready(function() {
 
   if(lastinput){
     console.log("in do stuff lastinput id: " +  lastinput.id)
-  } else{
-    alert("oops!")
   }
 
 
@@ -168,6 +166,10 @@ $(document).ready(function() {
                     console.log("lastinput id: " + lastinput.id)
                   }
               })
+              if !(lastinput){
+                alert("oops")
+              }
+              break;
       	    } else if($(this)[0].tagName.toLowerCase() == "a"){
               var elt = $(this)[0]
               var link = $(this)[0].getAttribute("href")
@@ -178,6 +180,7 @@ $(document).ready(function() {
                     lastinput = $(this)[0]
                   }
               })
+              break;
             } else if( $(this)[0].tagName.toLowerCase() == "button"){
               var elt = $(this)[0]
               var val = $(this)[0].value
@@ -225,9 +228,7 @@ $(document).ready(function() {
           alert("sorry, that is not a recognized command")
       	  console.log("sorry, that is not a recognized command")
       }
- 	}else{
-    alert("sorry, that is not a recognized command")
-  }
+ 	}
 
  })
 });
