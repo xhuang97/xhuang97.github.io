@@ -86,7 +86,10 @@ function loadUrl(location)
 $(document).ready(function() {
 
  $("#commandbutton").click(function() {
-  $("#command").val(final_transcript)
+  if (final_transcript.length > 1){
+    $("#command").val(final_transcript)
+  }
+  
  	var potentialcommand = $("#command").val();
 
  	console.log("potential command:" + potentialcommand);
