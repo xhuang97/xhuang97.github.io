@@ -104,6 +104,11 @@ function msg(){
 
 $(document).ready(function() {
 
+  $("#command").ready(function() {
+   if (final_transcript.length > 1){
+     $("#command").val(final_transcript)
+   }
+
   $(".scrollup").click(function() {
     $('html, body').animate({
         scrollTop: $(document).scrollTop()-200
