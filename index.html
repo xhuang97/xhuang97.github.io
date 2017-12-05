@@ -142,9 +142,6 @@ $(document).ready(function() {
 
       switch(verb) {
       	case "click":
-      	  // what do we do if click?
-      	  console.log("handling click")
-
       	  var stringpieces = arg.split(/\s/);
 
       	  $("a,input,button").each(function() {
@@ -201,8 +198,6 @@ $(document).ready(function() {
                 $(".scrolldown").click()
               }
           })
-      	  // what do we do on scroll?
-      	  console.log("handling scroll`")
       	  break;
       	case "enter":
           var stringpieces = arg.split(/\s/);
@@ -210,8 +205,6 @@ $(document).ready(function() {
             $(lastinput).val($(lasttext).val() + arg);
             console.log("lastinput val: " +  lastinput.val())
           }
-
-      	  console.log("handling enter")
       	  break;
       	default:
           alert("sorry, that is not a recognized command")
