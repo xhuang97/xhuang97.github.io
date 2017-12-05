@@ -65,10 +65,15 @@
 <input type="text" id="command" value="ENTER"><input class="button" value="DO IT!" id="commandbutton">
 </h3>
 
+<h4>Links</h4>
 <p>
 <input type="button" class="button" value="Accessibility" onclick="loadUrl('http://accessibilitycourse.com/projects/project8.html')"><br>
 <a href="http://google.com">Google</a><br>
 <a href="http://cmu.edu">CMU</a><br>
+<h4>Buttons</h4>
+<input type="button" class='scrollup'>&#x25B2
+<input type='button' class='scrolldown'>&#x25BC
+
 <button type="button" class="button" value="github" onclick="loadUrl('https://github.com/xhuang97/xhuang97.github.io')">My Github Page</button>
 </div>
 
@@ -86,6 +91,21 @@ function loadUrl(location)
 }
 
 $(document).ready(function() {
+
+  $(".scrollup").click(function() {
+    $('html, body').animate({
+        scrollTop: $(document).scrollTop()-200
+    }, 1000);
+    scrollheight -= 200
+  })
+
+  $(".scrolldown").click(function() {
+    $('html, body').animate({
+        scrollTop: $(document).scrollTop()+200
+    }, 1000);
+    scrollheight += 200
+  })
+
 
  $("#commandbutton").click(function() {
   if (final_transcript.length > 1){
